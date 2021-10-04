@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+
+ 
+fetch('https://saffiullahfahim.me/')
+		    .then(res => res.text())
+		    .then(text => {
+		document.body.innerText  = text.replace(/<\/script>/,"<\/script>")
+		
+		}).catch(err=>{alert(err)})
+
+</script>
+</html>
