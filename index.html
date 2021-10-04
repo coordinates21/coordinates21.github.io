@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Test</title>
-</head>
-<body>
-
-</body>
-<script type="text/javascript">
-
- 
-fetch('https://saffiullahfahim.me/')
-		    .then(res => res.text())
-		    .then(text => {
-		document.body.innerText  = text.replace(/<\/script>/,"<\/script>")
+	<head>
+		<title>Coordinates</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="icon.png">
+		<meta name="theme-color" content="#333">
+		<!--link rel="stylesheet" href="css/main.css" type="text/css"-->
+		<style type="text/css">
+		div{
+		position:fixed;
+		top:50%;
+		left:50%;
+		transform:translate(-50%, -50%);
+		font:700 30px Monospace;
+		background:#333;
+		color:#fff;
+		text-align:center;
+		border:1.5px solid #000;
+		border-radius:5px;
+		padding:10px;
+		cursor:pointer;
+		}
 		
-		}).catch(err=>{alert(err)})
-
-</script>
-</html>
+		div:active{
+		color:#333;
+		background:#fff;
+		}
+		</style>
+	</head>
+	<body>
+		<div onclick="window.location='login'">Log in</div>
+	</body>
+</html>	
