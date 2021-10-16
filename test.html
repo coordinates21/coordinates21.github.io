@@ -1,0 +1,78 @@
+<?php 
+
+	if($_POST){
+		if($_POST['newUser'] && $_POST['email']){
+			
+			$filename = './2b192g192d192e192d192h192c192f1930192b1930192g192i19/' . $_POST['newUser'];
+			
+			if (file_exists($filename)) {
+			echo "200";
+			} else {
+			echo "404";
+			}
+			
+		}
+	}
+	else{
+	echo "401 Bad Request!";
+	}
+	
+?>
+
+
+
+
+mkdir("./.events/." . $_POST['year']);
+		for ($x = 1; $x <= 12; $x++) {
+		mkdir("./.events/." . $_POST['year'] . "/." . $x);
+		}
+		$fh = fopen("./.events/." . $_POST['year'] . "/.data" , 'w');
+		fwrite($fh, $_POST['data']);
+		fclose($fh);
+		}
+		if($_POST['y'] && $_POST['m'] && $_POST['d'] && $_POST['data']){
+		$fh = fopen("./.events/." . $_POST['y'] ."/.". $_POST['m'] ."/.". $_POST['d'], 'w');
+		fwrite($fh, $_POST['data']);
+		fclose($fh);
+		<body></body>
+<script type="text/javascript">
+
+function stringTohash(str) {
+    var hash = '';
+    for(var i=0;i<str.length;i++) {
+      hash += str.charCodeAt(i).toString(19);
+    }
+    return hash;
+  }
+
+var dataToPost = new FormData(); 
+dataToPost.append("newUser", stringTohash("fahimgazi1000@gmail.com"))
+
+try{
+var url = "https://form.6te.net/check.php";
+     fetch(url,{
+     method: "POST",
+     mode: "no-cors",
+     header:{
+     'Content-Type': 'application/json'
+     },
+     body: dataToPost
+     })
+     .then(res => res.text())
+     .then(text=>{
+     document.body.innerText = text;
+     alert('data: '+text)
+     })
+     .catch(err=>{
+    document.body.innerText = err;
+    alert('err: '+err)
+     }
+     );
+ }
+ catch(err){
+ alert('load:'+err)
+ }
+ 
+ 
+    
+</script>
